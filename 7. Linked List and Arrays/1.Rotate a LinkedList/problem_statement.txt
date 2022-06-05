@@ -1,0 +1,63 @@
+Problem Statement:
+You have been given a Linked List having ‘N’ nodes and an integer ‘K’. You have to rotate the Linked List by ‘K’ positions in a clockwise direction.
+Example :
+ Given Linked List : 1 2 3 4 -1 and K : 2
+ Then the modified Linked List after K rotation : 3 4 1 2
+
+Input Format :
+The first line contains a single integer ‘T’ representing the number of test cases. 
+
+The first line of each test case contains single space-separated integers, denoting the elements of the Linked List with -1 being the last element denoting the end of the List (or null element).
+
+The next line of each test case contains an integer ‘K’, representing the number of positions up to the given Linked List that has to rotate.
+
+Output Format :
+For each test case, print the elements of the resultant Linked List after rotating by ‘K’ positions in a clockwise direction.
+
+Note:
+You do not need to print anything, it has already been taken care of. Just implement the given function.
+
+Constraints :
+1 <= ‘T’ <= 10
+1 <= ‘N’ <= 10^5
+0 <= node.data <= 10^9 and node.data != -1 
+0 <= ‘K’ <= 10^5
+
+Time Limit: 1 sec
+
+Sample Input 1 :
+2
+1 2 3 4 5 6 -1
+2
+2 4 -1
+3
+
+Sample Output 1 :
+5 6 1 2 3 4
+4 2
+
+Explanation For Sample Input 1 :
+For the first test case, after 1st clockwise rotation the modified Linked List will be : 6 1 2 3 4 5
+After, 2nd clockwise rotated the modified Linked List will be : 5 6 1 2 3 4
+
+For the second test case, after 1st clockwise rotation the modified Linked List will be : 4 2
+After, 2nd clockwise rotated the modified Linked List will be : 2 4
+After, 3rd clockwise rotated the modified Linked List will be : 4 2
+
+Sample Input 2 :
+2
+1 2 3 -1
+2
+3 6 9 -1
+0
+
+Sample Output 2:
+2 3 1
+3 6 9
+
+Explanation For Sample Input 2 :
+For the first test case, after 1st clockwise rotation the modified Linked List will be : 3 1 2
+After, 2nd clockwise rotated the modified Linked List will be : 2 3 1
+
+For the second test case, ‘K’ is 0 therefore there will be no rotation, so the Linked List remains unchanged.
+

@@ -1,0 +1,49 @@
+Problem Statement:
+Alice and Bob recently learned about bitwise xor operator. Intrigued by this concept, Alice gave Bob an array ‘A’ of ‘N’ integers and asked him to select two indexes ‘x’ and ‘y’ such that ‘x’ <= ‘y’ and bitwise xor of values present in these indexes is maximum possible among all such pairs.
+As always, Bob asked you to help him do the task.
+Input Format:
+The first line of input contains an integer ‘T’, denoting the number of test cases.
+
+The first line of each test case contains one integer ‘N’, denoting the size of the array.
+
+The following line contains an array ‘A’ of ‘N’ spaced integers.
+
+Output Format:
+For each test case, print a single integer in a new line denoting the maximum xor value.
+
+Note:
+You are not required to print the expected output. It has already been taken care of. Just implement the function.
+
+Constraints:
+1 <= T <= 5
+1 <= N <= 10^4
+1 <= A[i] <= 10^9 
+
+Time Limit: 1 sec
+
+Sample Input 1:
+2
+3
+2 1 4
+2
+3 2
+
+Sample Output 1:
+6
+1
+
+Explanation for Sample Input 1:
+In the first test case, Bob can select the 1st and 3rd index leading to a xor value of 6.
+In the second test case, there are only two elements, so Bob has to select both of them, so the final answer becomes 1.
+
+Sample Input 2:
+2
+4 
+1 2 3 4
+3 
+5 3 2
+
+Sample Output 2:
+7
+7
+

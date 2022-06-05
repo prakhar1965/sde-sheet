@@ -1,0 +1,72 @@
+Problem Statement:
+Ninja Coin is a famous crypto-currency in Ninja Land. Ninja has an array/list ‘PRICE’ of size ’N’ where ‘PRICE[i]’ is the price of a Ninja Coin on an ith day in INR, where 0 <= 'i' <= N-1.
+The span of the Ninja Coin price on an ith day is defined as the maximum number of consecutive days (starting from the ith day and going backward) for which the price of a Ninja Coin was less than or equal to its price at ith day.
+Your task is to return an array/list of size ‘N’ where the ith integer is the span of Ninja Coin price on an ith day. Go through the example for more clarity.
+For Example :
+Let the price of Ninja Coin for 5 consecutive days is [4, 2, 3, 3, 7].
+
+Then the span of Ninja Coin on the 0th day is 1 because we cannot move backward from day 0.
+
+The span of Ninja Coin on the 1st day is 1 because the price on day 0 is 4 which is greater than 2, so the only day 1 is counted.
+
+The span of Ninja Coin on the 2nd day is 2 because the price on day 2 and day 1 is less than or equal to 3 and then on day 0 price is 4 which is greater than 3, so we count day 2 and day 1.
+
+The span of Ninja Coin on the 3rd day is 3 because the price on day 3, day 2, and day 1 is less than or equal to 3, and on day 0 price is 4 which is greater than 3, so we count day 3, day 2, and day 1.
+
+The span of Ninja Coin on the 4th day is 5 because its value is higher than all previous days values.    
+
+Thus you should return an array/list [1, 1, 2, 3, 5].
+
+Input Format :
+The first line contains an integer 'T' which denotes the number of test cases or queries to be run.
+
+The first line of each test case will contain a single integer ‘N’, representing the size of ‘PRICE’ 
+
+The second line of each test case will contain ‘N’ space-separated integers representing array/list ‘PRICE’.
+
+Output Format :
+For each test case, return an array/list containing ‘N’ integers where the ith integer is the span of Ninja Coin price on an ith day, where 0 <= 'i' <= N-1.
+
+Output for every test case will be printed in a separate line.
+
+Note :
+You don’t need to print anything. It has already been taken care of.
+
+Constraints :
+1 <= T <= 50
+1 <= N <= 10000
+1 <= PRICE[i] <= 10^9
+
+
+Where ‘T’ is the number of test cases, 'N' is the size of ‘PRICE’, ‘PRICE[i]’  is the price of a Ninja Coin on an ith day in INR.
+
+
+Time limit: 1 sec.
+
+Sample Input 1 :
+2
+3
+1 1 1
+5
+4 2 3 3 6
+
+Sample Output 1 :
+1 2 3
+1 1 2 3 5
+
+Explanation of sample input 1 :
+In the first test case, the price of Ninja Coin is the same for all three consecutive days, so its span at ith day will be the number of days till ‘i’.
+
+For the second test case, refer to the problem statement for an explanation.
+
+Sample Input 2 :
+2
+7
+100 80 60 70 60 75 85
+5
+5 4 3 2 1
+
+Sample Output 2 :
+1 1 1 2 1 4 6
+1 1 1 1 1
+

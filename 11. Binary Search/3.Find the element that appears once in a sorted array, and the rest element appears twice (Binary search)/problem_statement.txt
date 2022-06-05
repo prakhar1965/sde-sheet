@@ -1,0 +1,73 @@
+Problem Statement:
+Nobita wants to impress Shizuka by guessing her lucky number.
+Shizuka gave Nobita a sorted list of ‘N’ numbers such that every number occurred twice in the list except Shizuka’s lucky number which appears only once.
+Nobita asked Doraemon to help him but Doraemon doesn’t have a gadget that can find Shizuka’s lucky number.
+So, Doraemon called you to find Shizuka’s lucky number. The fate of Nobita lies in your hand.
+Note :
+1. Shizuka’s lucky number will surely be present.
+2. There will only be a single lucky number.
+
+Input Format :
+The first line of input contains an integer 'T' representing the number of test cases. Then the test cases follow.
+
+The first line of each test case contains a single integer ‘N’, representing the total number of elements present in Shizuka’s list.
+
+The next line contains ‘N’ single-spaced elements, representing the elements of Shizuka’s list
+
+Output Format :
+For each test case, print an integer denoting the lucky number of Shizuka.
+
+The output for each test case will be printed in a separate line.    
+
+Constraints :
+1 <= T <= 5
+1 <= N <= 10^5
+0 <= data <= 10^9
+
+Where ‘data’ is the value of elements of Shizuka’s list. 
+
+Time Limit: 1 sec
+
+Note :
+You do not need to print anything, it has already been taken care of. Just implement the given function.
+
+Sample Input 1 :
+2
+5 
+1 1 3 5 5 
+7 
+2 2 4 4 5 7 7    
+
+Sample Output 1 :
+3 
+5
+
+Explanation of Sample Input 1 :
+Test Case 1 :  
+Given array is [1, 1, 3, 5, 5]    
+Here, 3 occurs once in the array. So, the answer is 3.
+
+Test Case 2 :
+Given array is [2, 2, 4, 4, 5, 7, 7]    
+Here, 5 occurs once in the array. So, the answer is 5.
+
+Sample Input 2 :
+2
+5
+1 1 4 4 15
+7 
+1 1 2 2 4 6 6  
+
+Sample Output 2 :
+15
+4
+
+Explanation of Sample Input 2 :
+Test Case 1 :
+Given array is [1, 1, 4, 4, 15].    
+Here, 3 occurs once in the array. So, the answer is 3.
+
+Test Case 2 :
+Given array is [1, 1, 2, 2, 4, 6, 6]    
+Here, 4 occurs once in the array. So, the answer is 4.
+

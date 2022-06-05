@@ -1,0 +1,58 @@
+Problem Statement:
+You are given two linked lists representing two non-negative numbers. The digits in the linked list are stored in reverse order, i.e. starting from least significant digit (LSD) to the most significant digit (MSD), and each of their nodes contains a single digit. Your task is to find the sum list and return the head of the sum list where the sum list is a linked list representation of the addition of two numbers.
+Note :
+The number represented by the linked lists do not contain any leading zeros. 
+
+Input Format:
+The first line of input contains a single integer T, representing the number of test cases. 
+
+Then the T test cases follow.
+
+The first line of each test case contains the elements of the first singly linked list separated by a single space and terminated by -1.
+
+The second line of each test case contains the elements of the second singly linked list separated by a single space and terminated by -1.
+
+Output Format:
+For each test case, print the sum linked list. The elements of the sum list should be single-space separated and terminated by -1.
+
+The output of each test case must be printed on a separate line.
+
+Note :
+You do not need to print anything; it has already been taken care of. Just implement the given function. 
+
+Constraints :
+1 <= T <= 10
+1 <= M, N <= 5 * 10^4
+0 <= data[i] <= 9 and data[i] != -1
+
+Where 'M' and 'N' are the number of nodes in the two linked lists, 'data[i]' is the data of the 'i-th' node.
+
+Time Limit: 1 sec
+
+Sample Input 1:
+2
+5 6 3 -1
+8 4 2 -1
+7 5 9 4 6 -1
+8 4 -1
+
+Sample Output 1:
+3 1 6 -1
+5 0 0 5 6 -1
+
+Explanation 1:
+For the first test case, we have two linked lists: 5 -> 6 -> 3 -> NULL  and 8 -> 4 -> 2 -> NULL, representing the numbers 365 and 248. The sum of the numbers is 613, represented by linked list 3 -> 1 -> 6 -> NULL.
+
+For the second test case,we have two linked lists: 7 -> 5 -> 9 -> 4 -> 6 -> NULL and 8 -> 4 -> NULL, representing the numbers 64957 and 48. The sum of the numbers is 65005, represented by linked list 5 -> 0 -> 0 -> 5 -> 6 -> NULL.
+
+Sample Input 2:
+2
+2 4 3 -1
+5 6 -1
+0 1 -1
+0 0 1 -1
+
+Sample Output 2:
+7 0 4 -1
+0 1 1 -1
+

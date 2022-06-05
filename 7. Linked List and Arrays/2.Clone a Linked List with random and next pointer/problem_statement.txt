@@ -1,0 +1,68 @@
+Problem Statement:
+Given a linked list having two pointers in each node. The first one points to the next node of the list, however, the other pointer is random and can point to any node of the list or null. The task is to create a deep copy of the given linked list and return its head. We will validate whether the linked list is a copy of the original linked list or not.
+A deep copy of a Linked List means we do not copy the references of the nodes of the original Linked List rather for each node in the original Linked List, a new node is created.
+For example,
+
+Random pointers are shown in red and next pointers in black.
+Input Format:
+The first line of input contains an integer ‘T’ representing the number of test cases. Then the test cases follow.
+
+The only line of each test case contains the elements of the linked-list with random pointers. The line consists of nodes (value of node followed by its random pointer) separated by a single space. In case a node (next or random pointer) is null, we take -1 in its place.
+
+Each node is represented as a pair of a value and its random index where,
+Value: an integer representing the value of the node
+Random index: the index of the node where the random pointer points to, or -1 if it does not point to any node.
+
+For example, the input for the linked list depicted in the below image would be:
+
+
+1 2 2 0 3 4 4 4 5 1 -1
+
+Explanation:
+The head node of the linked-list is 1, and its random pointer points to a node present at index 2, i.e. node 3.
+
+The second node of the linked list is 2, and its random pointer points to a node present at index 0, i.e. node 1.
+
+In this way, input for each node is taken until a pair having its first part as -1 is encountered since it denotes a node having null value, i.e. end of the linked list.
+
+Output Format:
+For each test case, the only output line contains “true” if the linked list is successfully cloned.
+
+The output for each test case is in a separate line.
+
+Note:
+You do not need to print anything, it has already been taken care of. Just implement the given function.
+
+Constraints:
+1 <= T <= 10 ^ 2
+0 <= N <= 10 ^ 3
+0 <= DATA <= 10 ^ 6 and data != -1
+-1 <= RANDOMINDEX < N
+
+Where ‘T’ is the number of test cases, ‘N’ is the total number of nodes in the linked list, 'DATA' is the value of the linked list node and 'RANDOMINDEX' is the index of the node where the random pointer points to.
+
+Time limit: 1 sec.
+
+Follow up:
+Can you do it without using extra space?
+
+Sample Input 1:
+1
+1 2 2 0 3 4 4 4 5 1 -1
+
+Sample Output 1:
+true
+
+Explanation of Sample Input 1:
+For the first test case, “true” will be printed if the linked list is successfully cloned.
+
+
+Sample Input 2:
+2
+1 1 2 1 -1
+7 -1 13 0 11 4 10 2 1 0 -1
+
+Sample Output 2:
+true
+true
+

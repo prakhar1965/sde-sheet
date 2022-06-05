@@ -1,0 +1,51 @@
+Problem Statement:
+You have been given a singly Linked List of 'N' nodes with integer data and an integer 'K'. Your task is to remove the Kth node from the end of the given Linked List.
+For example:
+The given linked list is 1 -> 2 -> 3 -> 4-> 'NULL'. and 'K' is 2
+After removing the second node from the end, the linked list become 1->2->4->'NULL'
+
+Follow Up:
+Can you solve this without finding the length of the linked list and using O(1) extra space?
+
+Input format :
+The first line of input contains an integer 'T' representing the number of test cases or queries to be processed. Then the test case follows.
+
+The first line of each test case contains a single integer 'K', representing the index(1 based indexing) of a node from the last to be deleted.
+
+The second line of each test case contains the elements of the singly linked list separated by a single space and terminated by -1. Hence, -1 would never be a list element.
+
+Output format :
+For each test case, print a single line that contains the updated linked list in a linear fashion. A single space will separate all the list data and -1 will indicate the end of the list.
+
+Print output of each test case in a separate line.
+
+Note :
+You do not need to print anything, it has already been taken care of. Just implement the given function.
+
+Constraints :
+1 <= 'T' <= 5
+0 <= 'N' <= 10 ^ 5
+0 <= 'K' <= 'N'
+1 <= 'DATA' <= 10 ^ 9 and 'DATA' != -1
+
+Time Limit: 1 sec.
+
+Sample Input 1 :
+1
+6
+1 2 3 4 5 6 -1
+
+Sample Output 1 :
+2 3 4 5 6 -1
+
+Explanation for Sample Input 1:
+In the given linked list the node with data ‘1’(head) will be removed as this is the 6th node from the end of the Linked List.
+
+Sample Input 2 :
+1
+1
+1 2 3 2 4 -1
+
+Sample Output 2 :
+1 2 3 2 -1
+

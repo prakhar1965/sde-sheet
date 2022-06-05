@@ -1,0 +1,69 @@
+Problem Statement:
+You are given two sorted arrays 'A' & 'B' of sizes 'N' & 'M'. You need to find the median of the two arrays when merged. If the total number of elements i.e., N + M is even then the median will be the mean of two medians.
+Example:
+Let array A = { 2, 4, 6, 8 } and array B = { 1, 3, 5, 7 }. 
+The array after merging A and B will be { 1, 2, 3, 4, 5, 6, 7, 8 }.
+Here two medians are 4 & 5. So the median will be a mean of 4 & 5, which is 4.5.
+
+Follow Up
+Can you solve this in O(min(log N, log M)) time complexity?
+
+Input format:
+The first line of input contains an integer ‘T’ denoting the number of test cases.
+
+The first line of each test case contains two space-separated integers ‘N’ and ‘M’ representing the sizes of the two arrays.
+
+The second line of each test case contains 'N' space-separated integers representing the elements of the first array.
+
+The third line of each test case contains 'M' space-separated integers representing the elements of the second array.
+
+Output format :
+For each test case, print a single line containing a single integer denoting the median of the combined array.
+
+The output of each test case will be printed in a separate line.
+
+Note:
+You do not need to print anything, it has already been taken care of. Just implement the given function.
+
+Constraints:
+1 <= T <= 10
+1 <= N <= 10 ^ 6
+1 <= M <= 10 ^ 6
+1 <= A[i] <= 10 ^ 9
+1 <= B[i] <= 10 ^ 9
+
+Time limit: 1 sec.
+
+Sample Input 1:
+2
+4 4
+2 4 6 8
+1 3 5 7 
+5 4
+1 4 7 8 10
+11 14 17 19
+
+Sample Output 1:
+4.5
+10.0
+
+Explanation
+Test Case 1: Refer to the example in the problem description.
+
+Test Case 2: 
+The array after merging will be { 1, 4, 7, 8, 10, 11, 14, 17, 19 }
+Here, the median will be 10 as it is in the middle.
+
+Sample Input 2:
+2
+2 3
+3 5
+1 7 8
+1 5
+5
+2 4 7 11 15
+
+Sample Output 2:
+5.0
+6.0
+

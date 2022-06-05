@@ -1,0 +1,57 @@
+Problem Statement:
+You are given an Integer array ‘ARR’ and an Integer ‘K’. Your task is to find the ‘K’ most frequent elements in ‘ARR’. Return the elements sorted in ascending order.
+For Example:
+You are given ‘ARR’ = {1, 2, 2, 3, 3} and ‘K’ = 2. Then the answer will {2, 3} as 2 and 3 are the elements occurring most number of times.
+
+Input Format :
+The first line of the input contains a single integer 'T', representing the number of test cases.
+
+The first line of each test case contains two space-separated integers, ‘N’ and ‘K’, representing the size of ‘ARR’ and given integer ‘K’, respectively.
+
+The Second line contains ‘N’ space-separated integers representing the elements of ‘ARR’.
+
+Output Format:
+For each test case, print the ‘K’ most frequent elements in ‘ARR’.
+
+Print the output of each test case in a separate line.
+
+Note:
+It is guaranteed that a unique answer exists.
+
+You do not need to print anything. It has already been taken care of. Just implement the given function.
+
+Constraints:
+1 <= T <= 10
+1 <= N <= 5000
+1 <= K <= Number of unique elements in ‘ARR’
+1 <= ARR[i] <= 10^6
+
+Time Limit: 1 sec
+
+Sample Input 1:
+2
+5 2
+1 2 2 3 3 
+4 1
+1 1 1 3
+
+Sample Output 1:
+2 3
+1
+
+Explanation of Sample Input 1:
+For the second test case, the answer will {2, 3} as 2 and 3 are the elements occurring most number of times.
+
+For the second test case, the answer will {1} as 1 is the element occurring most number of times.
+
+Sample Input 2:
+2
+2 2
+1 2 
+3 2
+1 4 1
+
+Sample Output 2:
+1 2
+1 4
+

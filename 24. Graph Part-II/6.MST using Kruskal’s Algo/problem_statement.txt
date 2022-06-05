@@ -1,0 +1,72 @@
+Problem Statement:
+You have been given a connected undirected weighted graph. Your task is to find the weight of the minimum spanning tree of the given graph.
+A minimum spanning tree is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles, and with the minimum possible total edge weight. A spanning tree’s weight is the sum of weights given to each edge of the spanning tree.
+Input Format:
+The first line contains an integer ‘T’ denoting the number of test cases. Then each test case follows.
+
+The first input line of each test case contains two integers ‘N’ and ‘M’ denoting the number of nodes and edges in the graph, respectively.
+
+Each of the next ‘M’ lines contains three space integers ‘U’, ‘V’, and ‘W’. There is an undirected edge between node ‘U’ and ‘V’ of weight ‘W’.
+
+Output Format:
+For each test case, return the weight of the minimum spanning tree of the given graph.
+
+Note:
+You don't have to print the expected output, it has already been taken care of. Just implement the given function.
+
+Constraints :
+1 <= T <= 50
+1 <= N <= 10000
+1 <= M <= 10000
+1 <= W <= 1000
+1 <= U, V <= N
+
+Time limit: 1 sec
+
+Sample Input 1 :
+2
+5 6
+1 2 6
+2 3 5
+3 4 4
+1 4 1
+1 3 2
+3 5 3
+2 1
+1 2 4
+
+Sample output 1 :
+11
+4
+
+Explanation of Sample output 1  :
+In test case 1, the graph is:
+
+
+The minimum spanning tree of the graph is:
+
+
+And its weight is 1 + 2 + 5 + 3 = 11.
+
+In test case 2, the graph has only one edge. So the minimum spanning will be the graph itself. And its weight is 4.
+
+Sample Input 2:
+2
+3 3
+1 2 1
+2 3 2
+3 1 3
+4 3
+1 2 4
+2 3 5
+3 4 1
+
+Sample Output 2:
+3
+10
+
+Explanation of Sample Output 2:
+In test case 1, the weight of the minimum spanning tree will be 3 by considering the 1-2 (weight 1) and 2-3 edge (weight 2).
+
+In test case 2, the weight of the minimum spanning tree will be 10 as we have to consider all the edges to make the tree connected.
+

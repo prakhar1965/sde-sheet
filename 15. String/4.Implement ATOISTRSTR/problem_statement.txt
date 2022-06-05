@@ -1,0 +1,79 @@
+Problem Statement:
+Given a string ‘STR’ of length 'N'. Implement the atoi function. If there are no numbers in the string, return 0.
+In other words, given a string ‘STR’ convert the string to an integer.
+Example :
+Give string : ”123456”, we return the integer value ‘123456’.
+
+The string can contain any ascii characters. If the character in the string is not a number, ignore it.
+Example :
+Given string : ”#messi10”, we return 10 as other characters “messi” are not numbers hence we skip them.
+
+Note :
+1. If the first char is ‘-’ it represents a minus sign and hence we return a negative integer.
+2. If there is no number in the string, return 0.
+3. It is guaranteed that the number is less than or equal to 10^9.
+
+Input format :
+The first line of input contains an integer ‘T’ denoting the number of test cases.
+Then the test cases follow.
+
+The only line of each test case contains the string ‘STR’.
+
+Output format :
+For each test case, return the integer formed by the given string.
+
+Note:
+You do not need to print anything, it has already been taken care of. Just implement the given function.
+
+Constraints :
+1 <= T <= 50
+0 <= N <= 3*10^3
+
+Time Limit: 1 sec
+
+Sample Input 1 :
+4
+12439
+-43534
+app546er
+cutedog
+
+Sample Output 1 :
+12439
+-43534
+546
+0
+
+Explanation For Sample Input 1:
+For the first test case,
+We can see that the string is a complete integer ‘12439’ so we return 12439 as an integer
+
+For the second test case,
+The first character is a ‘-’, which denotes negative sign so we need to return a negative integer, hence we return -43534 as an integer. 
+
+For the Third Test case,
+We have string : ’app546er’ 
+Now we ignore all the non-integer ascii values and return 546 as an integer, here apparently ‘apper’ is ignored.
+
+For the Fourth Test case,
+We have string : ’cutedog’.
+Now since the string has no number, we ignore all the characters and we return 0.
+
+Sample Input 2 :
+2
+Apple
+ban23
+
+Sample Output 2 :
+0
+23
+
+Explanation For Sample Input 2:
+For the first test case,
+We have string : ’Apple’.
+Now since the string has no number, we ignore all the characters and we return 0.
+
+For the second test case,
+We have string : ’ban23’ 
+Now we ignore all the non-integer ascii values and return 23 as an integer, here apparently ‘ban’ is ignored.
+

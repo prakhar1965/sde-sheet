@@ -1,0 +1,67 @@
+Problem Statement:
+You are given a string ‘str’ of length 'N' and a string ‘pat’ of length 'M'. Your task is to find the starting index of all the occurrences of ‘pat’ in str.
+You need to return a list of integers that denote the indices from which ‘pat’ is present in ‘str’(consider 0 based indexing).
+For example,
+Let str= “AABAACAADAABAABA”
+And pat= “AABA”
+We will return the array/list  [0,9,12] as we can clearly see that from indices 0 9 and 12 we have the same pattern ‘pat’ in ‘str’
+Note
+1. 'str' and 'pat' will consist of only uppercase English letters.
+2. Two occurrences of a pattern may overlap with each other. For example, for str = "AAAA" and pat = "AA", you need to return [0,1,2] and not [0,2].
+
+Input Format:
+The first line of input contains an integer ‘T’ denoting the number of test cases to run. Then the test cases follow.
+The first line of each test case contains the string ‘str’.
+The second line of each test case contains the string ‘pat’        
+
+Output Format
+For each test case, return a list of integers denoting the indices where the match happens.
+If no match happens, return an empty array.
+Output for each test case will be printed in a new line.
+
+Note:
+You do not need to print anything; it has already been taken care of. Just implement the given function.
+
+Constraints:
+1 <= T <= 100
+1 <= N <= 5000
+1 <= M <= 5000
+1<= M <= N
+'str' and 'pat' will consist of only uppercase english letters.
+
+
+Where ‘T’ is the total number of test cases, N is the length of 'str' and 'M' is the length of 'pat'. 
+Time limit: 1 second
+
+Sample Input 1:
+2
+CODENCODE
+CODE
+MANGOMAN
+MAN
+
+Sample Output 1:
+0 5
+0 5
+
+Explanation of sample input 1 :
+Test Case 1:
+
+In the first test case,
+The string ‘str’ is “CODENCODE” and the pattern is “CODE”. We can see that the pattern matches in the string at indices 0 and 5 so we return an array with [0,5].
+
+
+In the second test case,
+The string ‘str’ is “MANGOMAN” and the pattern is “MAN”. We can see that the pattern matches in the string at indices 0 and 5 so we return an array with [0,5].
+
+Sample Input 2:
+2
+BEARDO
+EAR
+MANYAWARMAN
+YAWAR
+
+Sample Output 2:
+1
+3
+
