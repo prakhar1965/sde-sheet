@@ -15,7 +15,7 @@ For each test case, the first line will contain a single integer 'N', the number
 Then, each of the next ‘N’ lines contains two types of query either 0 ‘X’ or 1.
 
 Output format :
-For each test case, output the answer for query of type 1 on a new line.
+For each test case, output the answer for query of type 1.
 
 Note :
 You don't need to print anything. It has already been taken care of. Just implement the given function.
