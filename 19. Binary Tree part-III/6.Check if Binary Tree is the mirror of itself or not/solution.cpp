@@ -19,29 +19,49 @@
     };
 
 ************************************************************/
-
-bool invert(TreeNode<int> *root, TreeNode<int> *leaf) {
-    if(!root) return false;
-    if(root == leaf) return true;
-
-    bool isLeft = invert(root->left, leaf);
-    if(isLeft) {
-        TreeNode<int> *curr = root->left;
-        root->left = NULL;
-        curr->left = root;
-        return true;
+#include<bits/stdc++.h>
+using namespace std;
+bool populateParent(TreeNode<int> *root, TreeNode<int>*leaf,stack<TreeNode<int>*> &s) {
+    s.push(root);
+    if(!root->left && !root->right) {
+        if(root->data == leaf->data)
+            return true;
+        else {
+            s.pop();
+            return false;
+        }
     }
-    bool isRight = invert(root->right, leaf);
-    if(isRight) {
-        TreeNode<int> *curr = root->left;
-        root->right->left = root;
-        root->right = curr;
-        return true;
+    if(root->left) {
+        if(populateParent(root->left,leaf,s))
+            return true;
     }
+    if(root->right) {
+        if(populateParent(root->right,leaf,s))
+            return true;
+    }
+    s.pop();
     return false;
 }
+
 TreeNode<int> * invertBinaryTree(TreeNode<int> *root, TreeNode<int> *leaf)
 {
-    invert(root, leaf);
-	return leaf;
+   
+    stack<TreeNode<int>*> st;
+    populateParent(root,leaf,st);
+    TreeNode<int>* newRoot = st.top() ,*par = newRoot;
+    st.pop();
+    while(!st.empty()) {
+        TreeNode<int>* curr = st.top();
+        st.pop();
+        if(curr->left == par){
+            curr->left = NULL;
+            par->left = curr;
+        } else {
+            curr->right = curr->left;
+            curr->left = NULL;
+            par->left = curr;
+        }
+        par = curr;
+    }
+    return newRoot;
 }
